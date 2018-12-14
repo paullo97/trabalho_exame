@@ -3,6 +3,7 @@ package com.snapshot.snapshot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//alteração pra o git
 @SpringBootApplication
 public class SnapshotApplication {
 
