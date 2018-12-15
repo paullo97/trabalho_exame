@@ -17,14 +17,14 @@ public class ProprietarioDao implements Dao<Proprietario, Integer> {
         //Era para ter algo aqui
     }
 
-    public Proprietario get(int id){
+    public Proprietario get(Integer id){
         EntityManager em = emf.createEntityManager();
         Proprietario entity = em.find(Proprietario.class, id);
         em.close();
         return entity;
     }
 
-    public void delete(int id){
+    public void delete(Integer id){
         //Era pra ter alguma coisa aqui
     }
 
