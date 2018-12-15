@@ -1,6 +1,7 @@
 package com.snapshot.snapshot.model;
 
 
+import lombok.Builder;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-
+@Builder
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
