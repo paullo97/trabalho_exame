@@ -6,11 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+
 @Builder
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
 @Entity
+@Table(name = "proprietario")
 public class Proprietario {
 
     @Id

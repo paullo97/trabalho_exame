@@ -1,23 +1,22 @@
 package com.snapshot.snapshot.model;
 
 
-import lombok.Builder;
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.*;
+
 @Builder
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
 @Entity
+@Table(name = "inquilino")
 public class Inquilino {
 
     @Id

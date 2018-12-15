@@ -1,18 +1,28 @@
 package com.snapshot.snapshot.repository;
 
+import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
 import java.util.List;
-
-import com.snapshot.snapshot.model.Imovel;
 import com.snapshot.snapshot.model.Inquilino;
-import org.springframework.stereotype.Repository;
 import com.snapshot.snapshot.dao.Dao;
-import com.snapshot.snapshot.model.Proprietario;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class InquilinoRepository implements Dao<Inquilino, Integer>{
+
+    @PersistenceUnit
+    private EntityManagerFactory emf;
+
     @Override
     public void save(Inquilino entity) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        if( entity != null){
+            em.persist(entity);
+            em.getTransaction().commit();
+            em.close();
+        }
 
     }
 
@@ -22,12 +32,12 @@ public class InquilinoRepository implements Dao<Inquilino, Integer>{
     }
 
     @Override
-    public void delete(Integer id) {
+    public Boolean delete(Integer id) {
 
     }
 
     @Override
-    public void update(Inquilino entity) {
+    public Boolean update(Inquilino entity) {
 
     }
 

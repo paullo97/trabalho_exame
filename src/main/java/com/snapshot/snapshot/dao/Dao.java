@@ -7,9 +7,9 @@ public interface Dao<E, I> {
 
     E get(I id);
 
-    void delete(I id);
+    Boolean delete(I id);
 
-    void update(E entity);
+    Boolean update(E entity);
 
     List<E> getAll();
 }
