@@ -8,7 +8,7 @@ import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 @Repository
-public class ProprietarioDao implements Dao<Proprietario, int> {
+public class ProprietarioDao implements Dao<Proprietario, Integer> {
     @PersistenceUnit
     private EntityManagerFactory emf;
 
