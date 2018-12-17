@@ -2,6 +2,7 @@ package com.snapshot.snapshot.repository;
 
 import com.snapshot.snapshot.dao.Dao;
 import com.snapshot.snapshot.model.Proprietario;
+
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -17,11 +18,11 @@ public class ProprietarioRepository implements Dao<Proprietario, Integer> {
 
 
     @Override
-    public void save(Proprietario entity) {
+    public void save(Proprietario proprietario) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        if( entity != null ){
-            em.persist(entity);
+        if( proprietario != null ){
+            em.persist(proprietario);
             em.getTransaction().commit();
             em.close();
         }
@@ -54,11 +55,11 @@ public class ProprietarioRepository implements Dao<Proprietario, Integer> {
     }
 
     @Override
-    public Boolean update(Proprietario entity) {
+    public Boolean update(Proprietario proprietario) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        if (entity != null) {
-            em.merge(entity);
+        if (proprietario != null) {
+            em.merge(proprietario);
         }
         try {
             em.getTransaction().commit();

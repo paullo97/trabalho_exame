@@ -24,12 +24,14 @@ public class ProprietarioDao implements Dao<Proprietario, Integer> {
         return entity;
     }
 
-    public void delete(Integer id){
+    public Boolean delete(Integer id){
         //Era pra ter alguma coisa aqui
+        return null;
     }
 
-    public void update(Proprietario entity){
+    public Boolean update(Proprietario entity){
         //Era para ter algo aqui
+        return null;
     }
 
     public List<Proprietario> getAll(){

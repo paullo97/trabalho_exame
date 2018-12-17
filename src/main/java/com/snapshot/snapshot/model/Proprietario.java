@@ -1,9 +1,6 @@
 package com.snapshot.snapshot.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
@@ -12,6 +9,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
+
 @Table(name = "proprietario")
 public class Proprietario {
 
@@ -29,9 +27,6 @@ public class Proprietario {
     @Column(name = "pro_cnpj", nullable = false)
     private String pro_cnpj;
 
-    public Proprietario() {
-    }
-
     public String toString(){
         return "Proprietario{" +
                 "pro_cpf = " + pro_cpf +
@@ -43,4 +38,5 @@ public class Proprietario {
     void prePersist(){
         //Era para ter algo aqui
     }
+
 }
