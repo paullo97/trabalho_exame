@@ -8,7 +8,9 @@ import java.util.List;
 
 import com.snapshot.snapshot.model.Corretor;
 import com.snapshot.snapshot.dao.Dao;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CorretorRepository implements Dao<Corretor, Integer>{
     @PersistenceUnit
     private EntityManagerFactory emf;
