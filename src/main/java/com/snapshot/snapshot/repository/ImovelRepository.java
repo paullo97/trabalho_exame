@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.snapshot.snapshot.model.Imovel;
 import com.snapshot.snapshot.dao.Dao;
+import com.snapshot.snapshot.model.Proprietario;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -15,7 +16,7 @@ public class ImovelRepository implements Dao<Imovel, Integer>{
     private EntityManagerFactory emf;
 
     @Override
-    public void save(Imovel imovel) {
+    public Proprietario save(Imovel imovel) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         if( imovel != null){
@@ -23,6 +24,7 @@ public class ImovelRepository implements Dao<Imovel, Integer>{
             em.getTransaction().commit();
             em.close();
         }
+        return null;
     }
 
     @Override

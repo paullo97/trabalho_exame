@@ -10,7 +10,11 @@
 		<dbms type="mysql" />
 	</preConditions>
 
-	<include file="src/main/resources/dbschema/scripts/sql1.sql" />
-	<include file="src/main/resources/dbschema/scripts/sql2.sql" />
+	<include file="src/main/resources/dbschema/scripts/createcorretor.sql" />
+	<include file="src/main/resources/dbschema/scripts/createcorretor_inquilino.sql" />
+	<include file="src/main/resources/dbschema/scripts/createimovel.sql" />
+	<include file="src/main/resources/dbschema/scripts/createinquilino.sql" />
+	<include file="src/main/resources/dbschema/scripts/createproprietario.sql" />
+	<include file="ssrc/main/resources/dbschema/scripts/createproprietario_corretor.sql" />
 
 </databaseChangeLog>

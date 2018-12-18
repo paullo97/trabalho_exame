@@ -18,14 +18,16 @@ public class ProprietarioRepository implements Dao<Proprietario, Integer> {
 
 
     @Override
-    public void save(Proprietario proprietario) {
+    public Proprietario save(Proprietario proprietario) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         if( proprietario != null ){
             em.persist(proprietario);
             em.getTransaction().commit();
             em.close();
+            return proprietario;
         }
+        return null;
     }
 
     @Override

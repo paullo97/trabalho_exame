@@ -16,7 +16,7 @@ public class InquilinoRepository implements Dao<Inquilino, Integer>{
     private EntityManagerFactory emf;
 
     @Override
-    public void save(Inquilino inquilino) {
+    public Proprietario save(Inquilino inquilino) {
          EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         if( inquilino != null){
@@ -24,6 +24,7 @@ public class InquilinoRepository implements Dao<Inquilino, Integer>{
             em.getTransaction().commit();
             em.close();
         }
+        return null;
     }
 
     @Override
