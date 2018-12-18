@@ -8,14 +8,13 @@ import java.util.List;
 
 import com.snapshot.snapshot.model.Corretor;
 import com.snapshot.snapshot.dao.Dao;
-import com.snapshot.snapshot.model.Proprietario;
 
 public class CorretorRepository implements Dao<Corretor, Integer>{
     @PersistenceUnit
     private EntityManagerFactory emf;
 
     @Override
-    public Proprietario save(Corretor corretor) {
+    public void save(Corretor corretor) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         if( corretor != null){
@@ -23,7 +22,6 @@ public class CorretorRepository implements Dao<Corretor, Integer>{
             em.getTransaction().commit();
             em.close();
         }
-        return null;
     }
 
     @Override

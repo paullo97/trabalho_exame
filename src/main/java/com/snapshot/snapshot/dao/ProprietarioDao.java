@@ -13,7 +13,7 @@ public class ProprietarioDao implements Dao<Proprietario, Integer> {
     private EntityManagerFactory emf;
 
     @Override
-    public Proprietario save(Proprietario entity){
+    public void save(Proprietario entity){
         //Era para ter algo aqui
         return entity;
     }

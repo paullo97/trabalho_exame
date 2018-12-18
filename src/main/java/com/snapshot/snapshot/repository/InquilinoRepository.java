@@ -6,7 +6,6 @@ import javax.persistence.PersistenceUnit;
 import java.util.List;
 import com.snapshot.snapshot.model.Inquilino;
 import com.snapshot.snapshot.dao.Dao;
-import com.snapshot.snapshot.model.Proprietario;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -16,15 +15,14 @@ public class InquilinoRepository implements Dao<Inquilino, Integer>{
     private EntityManagerFactory emf;
 
     @Override
-    public Proprietario save(Inquilino inquilino) {
-         EntityManager em = emf.createEntityManager();
+    public void save(Inquilino inquilino) {
+        EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         if( inquilino != null){
             em.persist(inquilino);
             em.getTransaction().commit();
             em.close();
         }
-        return null;
     }
 
     @Override

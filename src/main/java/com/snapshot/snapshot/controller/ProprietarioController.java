@@ -2,11 +2,13 @@ package com.snapshot.snapshot.controller;
 
 import com.snapshot.snapshot.model.Proprietario;
 import com.snapshot.snapshot.repository.ProprietarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProprietarioController {
 
+    @Autowired
     private ProprietarioRepository repository;
 
     ProprietarioController(ProprietarioRepository repository) {
@@ -15,8 +17,9 @@ public class ProprietarioController {
 
     //Metodo REST POST
     @PostMapping(path = "/proprietario/add")
-    Proprietario postProprietario(@RequestBody Proprietario proprietario) {
-        return repository.save(proprietario);
+    String postProprietario(@RequestBody Proprietario proprietario) {
+        //return repository.save(proprietario);
+        return "Salvo!";
     }
 
     //Metodo REST GET
