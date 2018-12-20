@@ -15,7 +15,6 @@ public class ProprietarioDao implements Dao<Proprietario, Integer> {
     @Override
     public void save(Proprietario entity){
         //Era para ter algo aqui
-        return entity;
     }
 
     public Proprietario get(Integer id){

@@ -29,7 +29,7 @@ public class ProprietarioController {
     }
 
     //Metodo REST DELETE
-    @GetMapping("/proprietario/deleteId/{id}")
+    @DeleteMapping("/proprietario/deleteId/{id}")
     Boolean deleteProprietarioId(@PathVariable Integer id) {
         return repository.delete(id);
     }

@@ -29,7 +29,7 @@ public class InquilinoController {
     }
 
     //Metodo REST DELETE
-    @GetMapping("/inquilino/deleteId/{id}")
+    @DeleteMapping("/inquilino/deleteId/{id}")
     Boolean deleteInquilinoId(@PathVariable Integer id) {
         return repository.delete(id);
     }

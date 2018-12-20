@@ -30,7 +30,7 @@ public class CorretorController {
     }
 
     //Metodo REST DELETE
-    @GetMapping("/corretor/deleteId/{id}")
+    @DeleteMapping("/corretor/deleteId/{id}")
     Boolean deleteCorretorId(@PathVariable Integer id) {
         return repository.delete(id);
     }

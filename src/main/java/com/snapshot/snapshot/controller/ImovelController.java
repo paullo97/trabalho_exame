@@ -32,7 +32,7 @@ public class ImovelController {
     }
 
     //Metodo REST DELETE
-    @GetMapping("/imovel/deleteId/{id}")
+    @DeleteMapping("/imovel/deleteId/{id}")
     Boolean deleteImovelId(@PathVariable Integer id) {
         return repository.delete(id);
     }
